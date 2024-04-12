@@ -326,8 +326,8 @@ nav button#menuButton {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 55px;
-    margin: 0 -15px;
-    padding: 25px;
+    margin: 0 -2000px;
+    padding: 0px;
     scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
@@ -346,7 +346,7 @@ nav button#menuButton {
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-35%);
     }
 }
 
