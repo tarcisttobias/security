@@ -887,3 +887,189 @@ footer .bottom .links a {
     }
 
 }
+
+
+@media screen and (max-width: 320px) {
+
+    nav ul li a {
+        font-size: 10px;
+    }
+
+
+
+    
+    nav li {
+        /* text-transform: uppercase; */
+        display: inline;
+
+        padding: 0px 0px 0px 0px;
+        line-height:80%;
+        top: 0; 
+        bottom: 0;
+        left: 0; 
+        right: 0;
+        margin: auto;
+
+    }
+
+    nav .logo a {
+        font-size: 10px;
+    }
+
+    .main .left h3 {
+        font-size: 30px;
+    }
+
+    .main .left p {
+        font-size: 10px;
+    }
+
+    .main .left button {
+        width: 50%;
+    }
+
+    .main .right img {
+        width: 280px;
+    }
+
+    .skills .skill-items .item {
+        width: 100%;
+    }
+
+
+
+
+    .projects .header button {
+        background-color: #5e3bee;
+        padding: 0px 0px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 0px;
+        border: none;
+        border-radius: 10px;
+        font-size: 0;
+
+    }
+    
+    .projects .header button i {
+        font-size: 30px;
+        
+    }
+
+    .projects .projects-items .item {
+        width: 80%;
+    }
+
+    .feedback .customers .item {
+        width: 100%;
+    }
+
+    .about .left img {
+        width: 280px;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 6rem;
+    }
+
+
+
+}
+
+
+
+.legal-links {
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 1s;
+}
+
+.legal-links:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+.legal a,
+.legal a:hover,
+.legal a:active {
+    color: #444;
+    text-decoration: none;
+}
+
+.privacy-policy h1 {
+    font-size: 2.5em;
+    /* font-family: 'CircularStd'; */
+  
+    letter-spacing: 0.1rem;
+}
+
+.privacy-policy h2 {
+    font-size: 25px;
+   
+    /* letter-spacing: 0.1rem; */
+}
+
+.legal-des {
+    text-align: justify;
+    font-size: 15px;
+}
+
+.legal-des strong {
+    /* font-size: 1.1em; */
+    font-weight: bold;
+}
+
+.privacy-policy p {
+    padding-right: 13vw;
+    letter-spacing: 0.8px;
+}
+
+#legal-hero {
+    margin-top: 5vh !important;
+    text-align: left;
+}
+
+#legal-hero-des {
+    padding-right: 10px;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.legal {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.comingsoon h1 {
+    font-size: 3em;
+}
+
+.comingsoon {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    /* background: white; */
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* width: 40em; */
+    height: 10em;
+    animation: opac 0.1s ease-in-out 5;
+}
+
+.comingsoon a {
+    color: #444;
+    font-weight: bold;
+    text-decoration: none;
+    transition: font-size 1s;
+}
+
+.comingsoon a:hover {
+    color: blue;
+    font-size: 1.5em;
+}
