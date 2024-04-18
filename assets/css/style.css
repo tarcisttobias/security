@@ -11,6 +11,7 @@ html {
     --color-primary: #fff;
     --color-secondary: #5e3bee;
     --color-white: #FFFFFF;
+    --light-text-color: #444;
     --section-padding: 80px;
     --transition-1: 0.25s ease-in-out;
 }
@@ -50,6 +51,7 @@ nav {
     justify-content: space-between;
     height: 80px;
     box-shadow: 0 5px 80px rgba(0, 0, 0, 0.1);
+    z-index:999; 
 }
 
 nav .logo,
@@ -153,6 +155,7 @@ nav button#menuButton {
 .skills h3,
 .about .right h3,
 .projects .header h3,
+.contactpg h3,
 .feedback h3 {
     font-size: 40px;
     margin-top: 20px;
@@ -308,21 +311,16 @@ nav button#menuButton {
 
 
 .r_customer {
-    padding: 85px 42px 0;
+
     overflow: hidden;
 }
 
-.r_customer-content {
-    margin-bottom: 25px;
-}
-
-.r_customer-list {
+ .r_customer-list {
 
     display: flex;
     align-items: center;
     height: max-content;
     width: 4000px;
-
     justify-content: flex-start;
     align-items: flex-start;
     gap: 55px;
@@ -340,6 +338,16 @@ nav button#menuButton {
 
 }
 
+.r_customer-item img  {
+    width: 100%;
+    filter: grayscale(1);
+    transition: var(--transition-1);
+}
+
+.r_customer-item img:hover {
+    filter: grayscale(0);
+}
+
 @keyframes scroll-list {
     from {
         transform: translateX(0);
@@ -351,20 +359,6 @@ nav button#menuButton {
 }
 
 
-.r_customer-item {
-    min-width: 0%;
-    scroll-snap-align: start;
-}
-
-.r_customer-item img {
-    width: 100%;
-    filter: grayscale(1);
-    transition: var(--transition-1);
-}
-
-.r_customer-item img:hover {
-    filter: grayscale(0);
-}
 
 
 
@@ -432,7 +426,7 @@ nav button#menuButton {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin-top: 3rem;
-
+    
 }
 
 .blogs .blog {
@@ -442,6 +436,7 @@ nav button#menuButton {
     border-radius: 5px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease-in-out;
+    
 }
 
 .blogs .blog:hover {
@@ -454,6 +449,7 @@ nav button#menuButton {
     filter: grayscale(0);
     transform: scale(1.1);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    
 
 }
 
@@ -472,6 +468,7 @@ nav button#menuButton {
     margin-top: -7px;
     padding: 1.1rem;
     border-top: 8px solid var(--color-secondary);
+    
 }
 
 .blogs .blog .blog-text h4 {
@@ -492,7 +489,9 @@ nav button#menuButton {
 }
 
 
-
+.contactpg {
+    padding: 110px 85px 0;
+}
 
 .hero-tag {
     margin-top: 50px;
@@ -524,7 +523,7 @@ label {
 }
 
 .form-control {
-    height: calc(2.25rem + 15px);
+    height: calc(2.25rem + 2px);
     width: 30%;
     font-size: 1rem;
     line-height: 1.5;
@@ -547,17 +546,39 @@ label {
     background: whitesmoke;
 }
 
+
+.form-control-msg {
+    height: calc(2.25rem + 90px);
+    width: 30%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #444;
+    border-radius: 0rem;
+    transition: all .5s ease-in-out;
+    outline: none;
+    resize: none;
+}
+
+
+.form-control-msg:focus {
+    outline: none;
+    border-bottom: 2px solid blue;
+    box-shadow: none;
+}
+
+.form-control-msg:hover {
+    background: whitesmoke;
+}
+
+
+
 /* input:focus, textarea:focus, select:focus{
     outline: none;
 } */
-.learn-btn {
-    padding: 5px 10px;
-    background: var(--light-text-color);
-    color: white;
-    border: 2px solid var(--light-text-color);
-    letter-spacing: 0.1;
-    transition: all 1s;
-}
+
 
 .contact-des a {
     text-decoration: none;
@@ -567,11 +588,6 @@ label {
 
 .contact-des a:hover {
     color: blue;
-}
-
-.learn-btn:hover {
-    background: blue;
-    border: 2px solid blue;
 }
 
 .contact-btn {
@@ -1072,4 +1088,72 @@ footer .bottom .links a {
 .comingsoon a:hover {
     color: blue;
     font-size: 1.5em;
+}
+
+/* contact */
+
+.social-icons a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.social-icons a:hover {
+    color: blue;
+}
+
+#contact-social {
+    margin-top: 10%;
+}
+
+.footer-full {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 30px 10px;
+    padding-top: 100px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-credits {
+    float: right;
+    /* display: inline; */
+}
+
+.footer-credits a {
+    color: #444;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.footer-credits a:hover {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-icons i {
+    font-size: 2em;
+    /* font-weight: 100; */
+    padding: 0px 5px;
+}
+
+
+.learn-btn {
+    color: #1c1e53;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #1c1e53;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learn-btn:hover {
+    background-color: #5e3bee;
+    border-color: #5e3bee;
+    color: #fff;
 }
